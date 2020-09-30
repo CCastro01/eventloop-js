@@ -1,4 +1,16 @@
+function fn5(){
+    console.log('timeout')
+}
+
+function fn4(){
+    fn5()
+}
+
 function fn3(){
+    setTimeout(() => {
+        fn4()
+    }, 3000);
+
     console.log('fn3')
 
 }
@@ -18,3 +30,4 @@ function main(){
 }
 
 main()
+console.log('fim')
