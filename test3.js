@@ -3,11 +3,12 @@ function esperarPor(tempo){
     while(Date.now() < futuro){}
 }
 
-setTimeout(() => {
+setInterval(() => {
     console.log("Exec #01")
-}, 3000);
+}, 400);
 
 setTimeout(() => {
+    esperarPor(3000)
     console.log("Exec #02")
 }, 300);
 
